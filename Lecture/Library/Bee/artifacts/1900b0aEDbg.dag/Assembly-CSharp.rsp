@@ -376,6 +376,7 @@
 "Assets/Scripts/DeathCheck.cs"
 "Assets/Scripts/PlayerControll.cs"
 "Assets/Scripts/RopeGrab.cs"
+"Assets/Scripts/Slide.cs"
 -langversion:9.0
 
 /deterministic
