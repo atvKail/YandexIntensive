@@ -12,8 +12,8 @@ public class Slide : MonoBehaviour
 
     private Rigidbody2D _rb2d;
 
-    private Vector2 _groundNormal;
-    private Vector2 _targetVelocity;
+    [SerializeField] private Vector2 _groundNormal;
+    [SerializeField] private Vector2 _targetVelocity;
     private bool _grounded;
     private ContactFilter2D _contactFilter;
     private RaycastHit2D[] _hitBuffer = new RaycastHit2D[16];
@@ -37,8 +37,14 @@ public class Slide : MonoBehaviour
     void Update()
     {
         Vector2 alongSurface = Vector2.Perpendicular(_groundNormal);
+        
+        _targetVelocity = alongSurface * _speed * -_groundNormal.x;
 
-        _targetVelocity = alongSurface * _speed;
+
+        if (_grounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            _velocity.y = 5;
+        }
     }
 
     void FixedUpdate()

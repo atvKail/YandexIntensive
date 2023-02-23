@@ -10,8 +10,8 @@ public class PlayerControll : MonoBehaviour
 
     private void Start()
     {
-        _rigidbody = this.GetComponent<Rigidbody2D>();
-        _GrabScript = this.GetComponent<RopeGrab>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _GrabScript = GetComponent<RopeGrab>();
     }
     void Update()
     {
@@ -27,9 +27,23 @@ public class PlayerControll : MonoBehaviour
         {
             Destroy(GetComponent<DistanceJoint2D>());
         }
-        if (Input.GetKey(KeyCode.G)) 
+        if (Input.GetKey(KeyCode.G))
         {
             _GrabScript.Grabbing();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Slide _TheSlider = GetComponent<Slide>();
+            if (_TheSlider.enabled)
+            {
+                gameObject.GetComponent<Slide>().enabled = false;
+                _rigidbody.isKinematic = false;
+            }
+            else
+            {
+                gameObject.GetComponent<Slide>().enabled = true;
+                _rigidbody.isKinematic = true;
+            }
         }
     }
 }
