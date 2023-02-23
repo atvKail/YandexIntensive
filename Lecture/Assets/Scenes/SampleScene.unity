@@ -993,9 +993,9 @@ GameObject:
   m_Component:
   - component: {fileID: 181484968}
   - component: {fileID: 181484967}
+  - component: {fileID: 181484975}
   - component: {fileID: 181484971}
   - component: {fileID: 181484974}
-  - component: {fileID: 181484975}
   - component: {fileID: 181484966}
   - component: {fileID: 181484970}
   m_Layer: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181484964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2212aad6fd24d0a439333b4b957e01bc, type: 3}
   m_Name: 
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181484964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb7272bc55b30064888a5aeee8696124, type: 3}
   m_Name: 
@@ -1157,8 +1157,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _speed: 1
-  _groundNormal: {x: 0, y: 0}
-  _targetVelocity: {x: 0, y: 0}
 --- !u!1 &200014278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1481,7 @@ GameObject:
   - component: {fileID: 261108861}
   - component: {fileID: 261108860}
   - component: {fileID: 261108859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,7 +1774,7 @@ GameObject:
   - component: {fileID: 386001725}
   - component: {fileID: 386001724}
   - component: {fileID: 386001723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FinishBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4903,7 +4901,7 @@ GameObject:
   - component: {fileID: 1675516269}
   - component: {fileID: 1675516268}
   - component: {fileID: 1675516267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border(3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5394,7 +5392,7 @@ GameObject:
   - component: {fileID: 1857488826}
   - component: {fileID: 1857488825}
   - component: {fileID: 1857488824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

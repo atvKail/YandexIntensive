@@ -33,15 +33,15 @@ public class PlayerControll : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Slide _TheSlider = GetComponent<Slide>();
-            if (_TheSlider.enabled)
+            PhysicsController _TheController = GetComponent<PhysicsController>();
+            if (_TheController.enabled)
             {
-                gameObject.GetComponent<Slide>().enabled = false;
+                gameObject.GetComponent<PhysicsController>().enabled = false;
                 _rigidbody.isKinematic = false;
             }
             else
             {
-                gameObject.GetComponent<Slide>().enabled = true;
+                gameObject.GetComponent<PhysicsController>().enabled = true;
                 _rigidbody.isKinematic = true;
             }
         }
