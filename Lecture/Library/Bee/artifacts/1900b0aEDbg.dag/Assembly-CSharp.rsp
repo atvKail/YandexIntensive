@@ -373,10 +373,12 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/ComponentGet.cs"
-"Assets/Scripts/DeathCheck.cs"
-"Assets/Scripts/PhysicsController.cs"
+"Assets/Scripts/Jump.cs"
+"Assets/Scripts/MoveRL.cs"
 "Assets/Scripts/PlayerControll.cs"
+"Assets/Scripts/RigidBodyKinematic.cs"
 "Assets/Scripts/RopeGrab.cs"
+"Assets/Scripts/Slide.cs"
 -langversion:9.0
 
 /deterministic
