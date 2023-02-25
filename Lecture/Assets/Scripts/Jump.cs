@@ -17,7 +17,7 @@ public class Jump : MonoBehaviour
 
         private void Update()
     {
-        if (Input.GetAxis("Jump") > 0 && _rigidbodyK._grounded)
+        if (Input.GetKey(KeyCode.Space) && _rigidbodyK._grounded)
         {
             _rigidbodyK.SetVelocity(_rigidbodyK.GetVelocity() + new Vector2(0, _JumpForce));
         }

@@ -374,7 +374,6 @@
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/ComponentGet.cs"
 "Assets/Scripts/Jump.cs"
-"Assets/Scripts/MoveRL.cs"
 "Assets/Scripts/PlayerControll.cs"
 "Assets/Scripts/RigidBodyKinematic.cs"
 "Assets/Scripts/RopeGrab.cs"

@@ -17,14 +17,8 @@ public class Slide : MonoBehaviour
 
     private void Update()
     {
-        Vector2 alongSurface = -_rigidbodyK._groundNormal.x * _SlideSpeed * Vector2.Perpendicular(_rigidbodyK._groundNormal); 
-
-        _rigidbodyK.SetTargetVelocity(alongSurface);
-    }
-    public void AddMove(Vector2 move)
-    {
         Vector2 alongSurface = -_rigidbodyK._groundNormal.x * _SlideSpeed * Vector2.Perpendicular(_rigidbodyK._groundNormal);
-
-        _rigidbodyK.SetTargetVelocity(alongSurface + move);
+        
+        _rigidbodyK.SetTargetVelocity(alongSurface);
     }
 }
