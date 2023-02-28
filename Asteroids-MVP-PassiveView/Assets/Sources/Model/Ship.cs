@@ -11,7 +11,6 @@ namespace Asteroids.Model
         private readonly float _maxSpeed = 0.0015f;
         private readonly float _secondsToStop = 1f;
         private readonly float _degreesPerSecond = 180;
-        public uint lifes = 3;
 
         public Vector2 Acceleration { get; private set; }
 
