@@ -11,7 +11,7 @@ public class ShipDebugUIPresenter : MonoBehaviour
     [SerializeField] private Text _speedLabel;
     [SerializeField] private Text _laserBulletsLabel;
     [SerializeField] private Text _laserRollbackLabel;
-    [SerializeField] private Text _lifeLabel;
+    //[SerializeField] private Text _lifeLabel;
 
     private void OnEnable()
     {
@@ -50,4 +50,9 @@ public class ShipDebugUIPresenter : MonoBehaviour
     {
         _laserBulletsLabel.text = $"Lasers: {_init.LaserGun.Bullets} / {_init.LaserGun.MaxBullets}";
     }
+
+    /*private void UpdateLifeCount()
+    {
+        _lifeLabel.text = $"Lifes: {_init}";
+    }*/
 }
