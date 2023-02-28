@@ -13,7 +13,14 @@ public class ShipPresenter : Presenter
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            _init.DisableShip();
+            if (_init.Ship.lifes > 0)
+            {
+                _init.Ship.lifes--;
+            }
+            if (_init.Ship.lifes == 0)
+            {
+                _init.DisableShip();
+            }
         }
     }
 }

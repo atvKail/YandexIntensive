@@ -11,7 +11,7 @@ public class ShipDebugUIPresenter : MonoBehaviour
     [SerializeField] private Text _speedLabel;
     [SerializeField] private Text _laserBulletsLabel;
     [SerializeField] private Text _laserRollbackLabel;
-    //[SerializeField] private Text _lifeLabel;
+    [SerializeField] private Text _lifeLabel;
 
     private void OnEnable()
     {
@@ -34,6 +34,7 @@ public class ShipDebugUIPresenter : MonoBehaviour
         _rotationLabel.text = $"Rotation: {Mathf.RoundToInt(_init.Ship.Rotation)}°";
         _speedLabel.text = $"Speed: {Mathf.RoundToInt(_init.Ship.Acceleration.magnitude * 10000)}";
         _laserRollbackLabel.text = $"To Rollback: {(_init.LaserGunRollback.Cooldown - _init.LaserGunRollback.AccumulatedTime):0.0}";
+        _lifeLabel.text = $"Lifes: {_init.Ship.lifes}";
     }
 
     private void OnLaserGunShot(Bullet bullet)
@@ -50,9 +51,4 @@ public class ShipDebugUIPresenter : MonoBehaviour
     {
         _laserBulletsLabel.text = $"Lasers: {_init.LaserGun.Bullets} / {_init.LaserGun.MaxBullets}";
     }
-
-    /*private void UpdateLifeCount()
-    {
-        _lifeLabel.text = $"Lifes: {_init}";
-    }*/
 }
