@@ -1,10 +1,18 @@
 using UnityEngine;
 using Asteroids.Model;
+using System.Collections.Generic;
 
 public class SpawnExample : MonoBehaviour
 {
     [SerializeField] private PresentersFactory _factory;
     [SerializeField] private Root _init;
+
+    [Header("Событие войнушки!")]
+    [SerializeField] private float _Cooldown;
+    [SerializeField] private uint _NumberRedTeam;
+    [SerializeField] private uint _NumberBlueTeam;
+    [SerializeField] private GameObject _redTeam;
+    [SerializeField] private GameObject _blueTeam;
 
     private int _index;
     private float _secondsPerIndex = 1f;

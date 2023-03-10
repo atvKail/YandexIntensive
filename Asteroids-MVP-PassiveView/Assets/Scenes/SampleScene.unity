@@ -1441,6 +1441,14 @@ MonoBehaviour:
   _asteroidTemplate: {fileID: -5592899209094444788, guid: 7b512be35dd70a740b70ad3f11129f6b, type: 3}
   _asteroidPartTemplate: {fileID: 2496268463148620810, guid: f9673b8bf2b901049947fef6ed94e495, type: 3}
   _nloTemplate: {fileID: -3177811691921934883, guid: 227e6133de9075a44aa0ad05e2399431, type: 3}
+  _TeamBlue: {fileID: -4839533443540255056, guid: 4ffcfd219903dad41a5edaf25776bb1d, type: 3}
+  _TeamRed: {fileID: 3891174559201028405, guid: 6f28c6a829e1ec64e8353ebea49ae45e, type: 3}
+  _redTeamLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _blueTeamLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &1581576390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1455,6 +1463,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factory: {fileID: 1581576389}
   _init: {fileID: 1581576386}
+  _Cooldown: 5
+  _NumberRedTeam: 5
+  _NumberBlueTeam: 5
+  _redTeam: {fileID: 1257215321222328127, guid: 6f28c6a829e1ec64e8353ebea49ae45e, type: 3}
+  _blueTeam: {fileID: 1257215321222328127, guid: 4ffcfd219903dad41a5edaf25776bb1d, type: 3}
 --- !u!1 &1724014138
 GameObject:
   m_ObjectHideFlags: 0

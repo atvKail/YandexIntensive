@@ -10,6 +10,12 @@ public class PresentersFactory : MonoBehaviour
     [SerializeField] private Presenter _asteroidTemplate;
     [SerializeField] private Presenter _asteroidPartTemplate;
     [SerializeField] private Presenter _nloTemplate;
+    [SerializeField] private Presenter _TeamBlue;
+    [SerializeField] private Presenter _TeamRed;
+
+    [Header("Слои для ивента")]
+    [SerializeField] private LayerMask _redTeamLayer;
+    [SerializeField] private LayerMask _blueTeamLayer;
 
     public void CreateBullet(Bullet bullet)
     {
@@ -25,9 +31,9 @@ public class PresentersFactory : MonoBehaviour
             CreatePresenter(_asteroidPartTemplate, asteroid.Model.CreatePart());
     }
 
-    public void CreateNlo(Nlo nlo)
+    public Presenter CreateNlo(Nlo nlo)
     {
-        CreatePresenter(_nloTemplate, nlo);
+        return CreatePresenter(_nloTemplate, nlo);
     }
 
     public void CreateAsteroid(Asteroid asteroid)
