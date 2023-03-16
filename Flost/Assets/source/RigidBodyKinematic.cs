@@ -43,7 +43,7 @@ public class RigidBodyKinematic : MonoBehaviour
         _grounded = false;
 
         Vector2 deltaPosition = _velocity * Time.deltaTime;
-        Vector2 moveAlongGround = new Vector2(_groundNormal.y, -_groundNormal.x);
+        Vector2 moveAlongGround = new(_groundNormal.y, -_groundNormal.x);
         Vector2 move = moveAlongGround * deltaPosition.x;
 
         Movement(move, false);
@@ -84,7 +84,7 @@ public class RigidBodyKinematic : MonoBehaviour
                 float projection = Vector2.Dot(_velocity, currentNormal);
                 if (projection < 0)
                 {
-                    _velocity = _velocity - projection * currentNormal;
+                    _velocity -= projection * currentNormal;
                 }
 
                 float modifiedDistance = _hitBufferList[i].distance - ShellRadius;
