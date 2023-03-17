@@ -7,7 +7,10 @@ public class Scale : MonoBehaviour
 
     public void SetScale(float value)
     {
-        transform.localScale = Vector3.one * value;
+        foreach (Transform child in GetComponentsInChildren<Transform>())
+        {
+            child.transform.localScale = Vector3.one * value;
+        }
     }
 
 }
