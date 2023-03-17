@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class MaterialManager : MonoBehaviour
 {
-
-    [SerializeField] private Renderer _renderer;
-
-    public void SetMaterial(Material material) {
-        _renderer.material = material;
-    }
     public void SetMaterialChild(Material material) 
     {
-        foreach (Transform child in GetComponentsInChildren<Transform>())
+        for(int i = 0; i < transform.childCount; i++)
         {
-            Renderer _renderer = GetComponentInChildren<Renderer>(child);
+            Renderer _renderer = transform.GetChild(i).GetComponent<Renderer>();
             _renderer.material = material;
         }
     }

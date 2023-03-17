@@ -8,6 +8,7 @@ public class ModelVariants : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] _models;
+    [SerializeField] private GameObject _nick;
     private GameObject _currenSelected;
     [SerializeField] private TMP_Dropdown _dropdown;
 
@@ -15,13 +16,14 @@ public class ModelVariants : MonoBehaviour
     {
         _currenSelected = _models[0];
         _dropdown.onValueChanged.AddListener(Select);
-
     }
 
     public void Select(int index) {
         _currenSelected.SetActive(false);
         _currenSelected = _models[index];
         _currenSelected.SetActive(true);
+
+        _nick.GetComponent<NameRotation>().parentObj = _models[index];
     }
 
 
