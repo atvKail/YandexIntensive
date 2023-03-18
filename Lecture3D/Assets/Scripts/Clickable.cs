@@ -2,24 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.WSA;
 
 public class Clickable : MonoBehaviour
 {
+    [Header("Depency:")]
+    [SerializeField] private Resources resources;
+    [SerializeField] private FlyingCoinCreator creator;
 
     [SerializeField] private AnimationCurve _scaleCurve;
     [SerializeField] private float _scaleTime = 0.25f;
-    [SerializeField] private HitEffect _hitEffectPrefab;
-    [SerializeField] private Resources _resources;
-
-    private int _coinsPerClick = 1;
+    [SerializeField] private GameObject miniCube;
+    [SerializeField] private List<Vector3> ForceDirections;
 
     // Метод вызывается из Interaction при клике на объект
     public void Hit()
     {
-        HitEffect hitEffect = Instantiate(_hitEffectPrefab, transform.position, Quaternion.identity);
-        hitEffect.Init(_coinsPerClick);
-        _resources.CollectCoins(1, transform.position);
         StartCoroutine(HitAnimation());
+        
+        CreateMiniCubs();
     }
 
     // Анимация колебания куба
@@ -34,10 +35,14 @@ public class Clickable : MonoBehaviour
         transform.localScale = Vector3.one;
     }
 
-    // Этот метод увеличивает количество монет, получаемой при клике
-    public void AddCoinsPerClick(int value)
+    private void CreateMiniCubs()
     {
-        _coinsPerClick += value;
+        foreach(Vector3 v in ForceDirections)
+        {
+            GameObject cube = Instantiate(miniCube);
+            LaunchAndReaction ret = cube.GetComponent<LaunchAndReaction>();
+            ret.Init(creator, resources);
+            ret.Launch(v);
+        }
     }
-
 }

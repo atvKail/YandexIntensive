@@ -10,20 +10,20 @@ public class ShopButton : MonoBehaviour
     [SerializeField] private int _price;
     [SerializeField] private Clickable _ñlickable;
 
-    private void Start()
+    /*private void Start()
     {
         _button.onClick.AddListener(Buy);
-    }
+    }*/
 
     private void UpdateButtonState(int coins) {
         _button.interactable = coins >= _price;
     }
 
-    public void Buy() {
+    /*public void Buy() {
         if (_resources.TryBuy(_price)) {
             _ñlickable.AddCoinsPerClick(1);
         }
-    }
+    }*/
 
     private void OnEnable()
     {
