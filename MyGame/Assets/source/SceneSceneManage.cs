@@ -17,4 +17,8 @@ public class SceneSceneManage : MonoBehaviour
     {
         Application.Quit();
     }
+    public void LoadingNextScene(int indexNextScene)
+    {
+        SceneManager.LoadScene(indexNextScene);
+    }
 }

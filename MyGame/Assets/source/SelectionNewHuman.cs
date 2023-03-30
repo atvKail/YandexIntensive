@@ -15,9 +15,9 @@ public class SelectionNewHuman : MonoBehaviour
 
     public GameObject SelectNextHuman()
     {
-        if (humans.Count - 1 == IndexSelected + 1)
+        if (IndexSelected >= humans.Count - 1)
         {
-            IndexSelected = Random.Range(0, humans.Count);
+            IndexSelected = Random.Range(0, humans.Count - 2);
         }
         SetSprite(humans[++IndexSelected]);
         return gameObject;
